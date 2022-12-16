@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1 solid black;
+    font-family: 'Roboto', sans-serif; 
+}
+
+:root {
+    --main-color: #CC8B86;
+    --secondary-color: #F9EAE1;
+    --additional-secondary: #eccfbc;
+    --color-grey: #cccccc;
+    --additional-grey: #ABABAB;
+    --color-text: black;
+ }
+
+body {
+    min-width: 320px;
+}
+
+a {
+    text-decoration: none;  
+}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+.logo {
+    color: var(--secondary-color);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.nav_list a {
+    color: var(--secondary-color);
+}
+
+.menu {
+    display: flex;
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: bold;
+    gap: 30px;
+    padding: 5px;
+
+}
+.menu li {
+    padding: 5px 15px;
+}
+
+.menu a:hover {
+    transition: all .3s;
+    color: var(--additional-secondary);
+}
+
+#menu-toggle {
+    display: none;
+
+}
+
+.burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.line-burger { 
+    background-color: var(--secondary-color);
+    display: block;
+    position: relative;
+   
+    height: 2px;
+    
+    width: 24px;
+    margin-top: 20px;
+}
+
+.line-burger::before,
+.line-burger::after {
+    background-color: var(--secondary-color);
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all .3s;
+    width: 100%;
+    height: 100%;
+}
+
+.line-burger::before {
+    top: 7px;
+}
+.line-burger::after {
+    top: -7px;
+}
+
+/*=======breakpoints======*/
+
+/* tablet*/
+@media screen and (max-width: 768px) {
+    .menu {
+       display: none;
+       max-height: 0; 
+       overflow: hidden;
+       position: absolute;
+       text-align: center;
+       background-color: var(--color-grey);
+       right: 0;
+       left: 0;
+      
+    }
+    .menu li a {
+        color: var(--color-text);
+    }
+
+    .menu li {
+        transition: all .5s;
+    }
+
+    .menu li:hover {
+        background-color: var(--additional-grey);
+    }
+
+    .menu li a:hover{
+        color: var(--color-grey);
+    }
+
+    .burger {
+        display: block;
+        padding: 20px 0;
+        
+    }
+
+  
+    #menu-toggle:checked ~ .menu {
+        display: block;
+        max-height: 100%;
+        transition: all .5s;
+    }
+
+    #menu-toggle:checked ~ .burger .line-burger {
+        background-color: transparent;
+    }
+
+    #menu-toggle:checked ~ .burger .line-burger::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #menu-toggle:checked ~ .burger .line-burger::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+}
