@@ -27,6 +27,7 @@ ul {
     list-style: none;
 }
 
+/*=======menu hamburger and nav======*/
 .nav {
     background-color: var(--main-color);
     display: flex;
@@ -103,6 +104,26 @@ ul {
 .line-burger::after {
     top: -7px;
 }
+
+.shopping {
+    width: 24px;
+    height: 24px;  
+}
+/*=======articles======*/
+
+.book_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px 20px 50px;
+}
+
+.about {
+    padding: 20px 50px 20px 50px; 
+}
+
+
+
 
 /*=======breakpoints======*/
 
