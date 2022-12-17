@@ -376,7 +376,7 @@ sk
 }
 
 /* for desktops, large screens. */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   
     .nav_list a {
         color: var(--secondary-color);
@@ -387,7 +387,7 @@ sk
     }
 
     .nav {
-        padding: 30px 300px 30px 300px;
+        padding: 30px 250px 30px 250px;
     }
 
     .menu {
@@ -401,7 +401,7 @@ sk
         top: 0;
         margin-top: 35px;
         padding-top: 10px;
-        margin-right: 300px;
+        margin-right: 250px;
      }
 
      .menu li:hover {
@@ -412,6 +412,7 @@ sk
         color: var(--secondary-color);
         font-size: 18px;
         font-weight: bold;
+        
     }
     
     .menu li a:hover {
@@ -421,7 +422,7 @@ sk
 
     .book_description {
         display: flex;
-        padding: 30px 300px 30px 300px;
+        padding: 30px 250px 30px 250px;
     }
 
     .about {
@@ -480,7 +481,7 @@ sk
     /*=======you may also like======*/
     
     .section_may_like {
-        padding: 20px 300px 30px 300px;
+        padding: 20px 250px 30px 250px;
     }
 
     .book {
@@ -490,11 +491,12 @@ sk
     /*=======footer======*/
 
 .footer { 
-        padding: 30px 300px 30px 300px;
+    padding: 20px 250px 30px 250px;
     }
 
 .arrow {
         margin-right: 200px; 
+        margin-bottom: 40px;
     }
 .nav_footer {
     padding-left: 100px;
