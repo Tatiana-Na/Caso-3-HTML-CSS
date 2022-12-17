@@ -28,61 +28,77 @@ ul {
 }
 
 /*=======menu hamburger and nav======*/
+
 .nav {
     background-color: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 50px 20px 50px;;
 }
-
 
 .logo {
     color: var(--secondary-color);
     font-size: 27px;
     font-weight: bold;
 }
-
 .nav_list a {
     color: var(--secondary-color);
 }
 
 .menu {
-    display: flex;
-    color: var(--secondary-color);
-    font-size: 16px;
-    font-weight: bold;
-    gap: 30px;
-    padding: 5px;
+    display: none;
+    max-height: 0; 
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    background-color: var(--color-grey);
+    right: 0;
+    left: 0; 
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+ }
 
+.menu li a {
+    color: var(--color-text);
+    padding-bottom: 5px;
 }
-.menu li {
-    padding: 5px 15px;
-}
-
 .menu a:hover {
     transition: all .3s;
     color: var(--additional-secondary);
 }
 
+
+.menu li {
+    transition: all .5s;
+    padding: 5px 15px;
+}
+
+.menu li:hover {
+    background-color: var(--additional-grey);
+}
+
+.menu li a:hover{
+    color: var(--color-grey);
+}
+
 #menu-toggle {
     display: none;
-
 }
 
 .burger {
-    display: none;
+    display: block;
     font-size: 24px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .line-burger { 
     background-color: var(--secondary-color);
     display: block;
     position: relative;
-   
-    height: 2px;
-    
+    height: 2.5px;
     width: 24px;
     margin-top: 20px;
 }
@@ -97,7 +113,6 @@ ul {
     width: 100%;
     height: 100%;
 }
-
 .line-burger::before {
     top: 7px;
 }
@@ -109,6 +124,28 @@ ul {
     width: 24px;
     height: 24px;  
 }
+
+#menu-toggle:checked ~ .menu {
+    display: block;
+    max-height: 100%;
+    transition: all .5s;
+}
+
+#menu-toggle:checked ~ .burger .line-burger {
+    background-color: transparent;
+}
+
+#menu-toggle:checked ~ .burger .line-burger::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+#menu-toggle:checked ~ .burger .line-burger::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
 /*=======articles======*/
 
 .about {
@@ -117,10 +154,21 @@ ul {
     flex-direction: column;
     padding: 20px 50px 20px 50px;
 }
+h4{
+    font-size: 15px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.text-details{
+    font-size: 14px;
+    line-height: 1.5;
+}
 
 .description {
-    padding: 20px 50px 20px 50px; 
+    padding: 15px 50px 20px 50px; 
 }
+
 h2 {
     color: var(--main-color);
     font-size: 27px;
@@ -153,28 +201,39 @@ h3 {
     padding: 5px;
     border: none;
     border-radius: 3px;
+    margin-bottom: 20px;
  }
 
 /*=======you may also like======*/
 
 .section_may_like {
-    width: 100%;
     background-color: var(--secondary-color);
+    width: 100vw;
     padding: 20px 50px 20px 50px;
 }
-
-.books_cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+.h4 {
+   font-size: 16px;
+   font-weight: bold;
+   padding-bottom: 10px;
 }
+
+.second-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;   
+}
+
 .book {
- height: 190px;
+    width: 160px;
+    
+}
+.book_2 {
+    width: 160px;
 }
 
 /*=======footer======*/
 
-footer {
+.footer {
     background-color: var(--main-color);
     width: 100vw;  
     display: flex;
@@ -185,7 +244,7 @@ footer {
     color: var(--secondary-color);
     font-size: 25px;
     font-weight: 600;
-    padding-left: 30px;
+    padding-left: 50px;
     padding-top: 30px;
 }
 
@@ -194,8 +253,7 @@ footer {
     color: var(--secondary-color);
     text-align: left;
     padding-top: 30px;
-    margin-left: 146px;
-   
+    margin-left: 146px;  
 }
 
 
@@ -227,7 +285,7 @@ gap: 15px;
 text-decoration: none;
 margin-left: 141px; 
 padding-top: 10px;
-padding-bottom: 40px;
+padding-bottom: 70px;
 
 }
 .linkedin {
@@ -261,58 +319,49 @@ color: var(--secondary-color);
 /*=======breakpoints======*/
 
 /* tablet*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .menu {
-       display: none;
-       max-height: 0; 
-       overflow: hidden;
-       position: absolute;
-       text-align: center;
-       background-color: var(--color-grey);
-       right: 0;
-       left: 0;
-      
-    }
-    .menu li a {
-        color: var(--color-text);
+        display: flex;
+        color: var(--secondary-color);
+        font-size: 16px;
+        font-weight: bold;
+        gap: 30px;
+        padding: 5px;
+    
     }
 
-    .menu li {
-        transition: all .5s;
+    .footer { 
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding: 20px 70px 40px 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: flex-start;   
     }
 
-    .menu li:hover {
-        background-color: var(--additional-grey);
-    }
+   
 
-    .menu li a:hover{
-        color: var(--color-grey);
+    .text-footer a {
+        align-items: flex-start;    
     }
-
-    .burger {
-        display: block;
-        padding: 20px 0;
+    
+    .arrow {
+        margin-bottom: 86px;
+        margin-right: 57px;
         
     }
+}
 
-  
-    #menu-toggle:checked ~ .menu {
-        display: block;
-        max-height: 100%;
-        transition: all .5s;
+/* for desktops, large screens. */
+@media screen and (min-width: 1024px) {
+    .book_description {
+        display: flex;
     }
-
-    #menu-toggle:checked ~ .burger .line-burger {
-        background-color: transparent;
+    .about {
+        width: 50%;
     }
-
-    #menu-toggle:checked ~ .burger .line-burger::before {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-
-    #menu-toggle:checked ~ .burger .line-burger::after {
-        transform: rotate(45deg);
-        top: 0;
+    .description{
+        width: 50%;
     }
 }
