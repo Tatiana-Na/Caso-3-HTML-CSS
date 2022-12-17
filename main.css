@@ -45,9 +45,7 @@ ul {
     font-size: 27px;
     font-weight: bold;
 }
-.nav_list a {
-    color: var(--secondary-color);
-}
+
 
 .menu {
     display: none;
@@ -158,7 +156,7 @@ ul {
     padding: 20px 50px 20px 50px;
 }
 h4{
-    font-size: 15px;
+    font-size: 16px;
     padding-top: 25px;
     padding-bottom: 10px;
 }
@@ -207,6 +205,12 @@ h3 {
     margin-bottom: 20px;
  }
 
+ .btn_comprar:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+ }
+
+
 /*=======you may also like======*/
 
 .section_may_like {
@@ -227,12 +231,9 @@ h3 {
 }
 
 .book {
-    width: 160px;
-    
+    width: 160px; 
 }
-.book_2 {
-    width: 160px;
-}
+
 
 /*=======footer======*/
 
@@ -312,15 +313,19 @@ color: var(--secondary-color);
     right: 0;
     width: 24px;
     height: 24px;
-    margin-bottom: 16px;
-    margin-right: 20px;   
+    margin-bottom: 20px;
+    margin-right: 50px;  
+
 }
 
 .arrow-2 {
     color: var(--secondary-color);
     }
 
+
+
 /*=======breakpoints======*/
+
 
 
 /* tablet*/
@@ -333,14 +338,17 @@ color: var(--secondary-color);
 .about {
     padding: 20px 100px 20px 100px;
     }
+
 .cover {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0;
+    
 }
 
 .description {
     padding: 20px 100px 20px 100px; 
 }
+
+
 
 .section_may_like {
     padding: 20px 100px 40px 100px;
@@ -364,20 +372,139 @@ color: var(--secondary-color);
     }
     
 .arrow {
-        margin-bottom: 86px;
-        margin-right: 57px; 
+        margin-bottom: 80px;
+        margin-right: 100px; 
     }
 }
 
 /* for desktops, large screens. */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
+  
+    .nav_list a {
+        color: var(--secondary-color);
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .nav {
+        padding: 30px 300px 30px 300px;
+    }
+
+    .menu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        background-color: transparent;
+        justify-content: flex-end;
+        gap: 30px;
+        top: 0;
+        margin-top: 35px;
+        padding-top: 10px;
+        margin-right: 300px;
+     }
+
+     .menu li:hover {
+        background-color: transparent;
+     }
+
+     .menu li a {
+        color: var(--secondary-color);
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .menu li a:hover {
+        color: var(--additional-secondary);
+        
+    }
+
     .book_description {
         display: flex;
+        padding: 30px 300px 30px 300px;
     }
+
     .about {
-        width: 50%;
+        padding: 30px 0px 0px 0px;
+        width: 100%;
+       
+   }
+   
+    .cover {
+        padding: 0;
+        height: auto;
+        max-width: 400px;
+    }    
+
+    
+    h4{
+        font-size: 18px;
+        
     }
-    .description{
-        width: 50%;
+    
+    .text-details{
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 20px;
     }
+    
+    .description {
+        padding: 30px 20px 0px 60px; 
+    }
+    h2 {
+        font-size: 32px;
+        padding-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 25px;
+        padding-bottom: 15px;
+    }
+     .description_first_p {
+        font-size: 16px;
+        padding-bottom: 15px;
+        line-height: 1.5;
+     }
+    
+     .description_second_p {
+        font-size: 16px;
+        line-height: 1.5;
+        padding-bottom: 25px;
+     }
+
+     .btn_comprar {
+        font-size: 16px;
+        color: var(--secondary-color);
+     }
+    
+    /*=======you may also like======*/
+    
+    .section_may_like {
+        padding: 20px 300px 30px 300px;
+    }
+
+    .book {
+        width: 200px; 
+    }
+    
+    /*=======footer======*/
+
+.footer { 
+        padding: 30px 300px 30px 300px;
+    }
+
+.arrow {
+        margin-right: 200px; 
+    }
+.nav_footer {
+    padding-left: 100px;
+}
+
+.text-footer {
+font-size: 15px;
+line-height: 1.5;
+}
+
 }
