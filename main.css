@@ -19,6 +19,7 @@ body {
     min-width: 320px;
 }
 
+
 a {
     text-decoration: none;  
 }
@@ -34,7 +35,9 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 50px 20px 50px;;
+    padding: 20px 50px 20px 50px;
+    right: 0;
+    left: 0; 
 }
 
 .logo {
@@ -55,20 +58,20 @@ ul {
     background-color: var(--color-grey);
     right: 0;
     left: 0; 
-    margin-top: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    line-height: 2;
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
  }
 
 .menu li a {
     color: var(--color-text);
-    padding-bottom: 5px;
 }
+
 .menu a:hover {
     transition: all .3s;
     color: var(--additional-secondary);
 }
-
 
 .menu li {
     transition: all .5s;
@@ -240,6 +243,7 @@ h3 {
     flex-direction: column;
     position: relative; 
 }
+
 .logo_footer {
     color: var(--secondary-color);
     font-size: 25px;
@@ -318,19 +322,30 @@ color: var(--secondary-color);
 
 /*=======breakpoints======*/
 
+
 /* tablet*/
 @media screen and (min-width: 768px) {
-    .menu {
-        display: flex;
-        color: var(--secondary-color);
-        font-size: 16px;
-        font-weight: bold;
-        gap: 30px;
-        padding: 5px;
-    
-    }
 
-    .footer { 
+.nav   {
+    padding: 20px 100px 20px 100px;
+}
+   
+.about {
+    padding: 20px 100px 20px 100px;
+    }
+.cover {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.description {
+    padding: 20px 100px 20px 100px; 
+}
+
+.section_may_like {
+    padding: 20px 100px 40px 100px;
+}
+.footer { 
         padding-top: 20px;
         padding-bottom: 40px;
         padding: 20px 70px 40px 100px;
@@ -340,16 +355,17 @@ color: var(--secondary-color);
         align-items: flex-start;   
     }
 
-   
+.logo_footer {
+    padding-left: 0;
+}
 
-    .text-footer a {
+.text-footer a {
         align-items: flex-start;    
     }
     
-    .arrow {
+.arrow {
         margin-bottom: 86px;
-        margin-right: 57px;
-        
+        margin-right: 57px; 
     }
 }
 
